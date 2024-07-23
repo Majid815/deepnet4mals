@@ -1,0 +1,72 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{"ZBTUGO":55}'}
+    name: card_1
+    layout_properties: {grid_position: 'USOIQF,WRHUMC'}
+    components:
+    - type: Label
+      properties:
+        role: null
+        bold: false
+        align: left
+        spacing_above: small
+        background: ''
+        icon: ''
+        underline: false
+        font: ''
+        icon_align: left
+        foreground: ''
+        spacing_below: small
+        visible: true
+        border: ''
+        italic: false
+        font_size: 20
+        tooltip: ''
+        text: |
+          This is a deeplearning malware detection system that I have created during my studies at university. The system is composed of three main models. A CNN component that analyses exe files after transforming them into images. An LSTM mode that analyses the sequences of instructions in assembly language. Finally, and SAE+FNN to analyze the exe file DLLs.
+
+          I have previously posted some articles about this work on LinkedIn, you might check them out:
+      name: label_2
+      layout_properties: {grid_position: 'LDCEYO,ZUSTVW'}
+    - type: Link
+      properties: {role: null, bold: false, align: left, col_widths: '{}', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: 'https://medium.com/analytics-vidhya/malware-detection-with-deep-learning-state-of-the-art-177c81aa83ea', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: '1. State of the art: DeepLearning based malware detection'}
+      name: link_1
+      layout_properties: {grid_position: 'GCUUSQ,ZBTUGO'}
+      components:
+      - type: Link
+        properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: 'https://medium.com/analytics-vidhya/cnn-based-malware-detection-python-and-tensorflow-717f8de84ee', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 2. CNN based malware detection}
+        name: link_2
+        layout_properties: {grid_position: 'OOFEHQ,FAHMHN'}
+      - type: Link
+        properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: 'https://isleem.medium.com/detect-malware-packers-and-cryptors-with-python-yara-pefile-65bf3c15be78', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 3. Detect malware packers and cryptors with Yara and PeFile}
+        name: link_3
+        layout_properties: {grid_position: 'ESATDF,NRRCUJ'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: 'A lot more is yet to come, but if you are impatient you can check my github repository where I posted almost the entire project + a cool web gui to test the models'}
+      name: label_3
+      layout_properties: {grid_position: 'GGGEXD,VYLWUG'}
+    - type: Link
+      properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: 'https://github.com/islem-esi/DeepMalwareDetector', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Deep Malware Detector repository}
+      name: link_4
+      layout_properties: {grid_position: 'RTFYZB,CPQNHC'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: DEEP NET FOR MALWARE DETECTION}
+  name: label_1
+  layout_properties: {slot: title}
+- type: Button
+  properties: {role: primary-color, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: GO TO DEMO PAGE}
+  name: primary_color_1
+  layout_properties: {slot: default}

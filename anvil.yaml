@@ -1,0 +1,11 @@
+allow_embedding: false
+package_name: deepnet4mals
+db_schema: []
+startup: {type: form, module: Form2}
+name: Clone of deepnet4mals (3)
+correct_dependency_ids: {}
+renamed: true
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox, server_spec: null}
+dependencies: []
+metadata: {}
+services: []

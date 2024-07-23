@@ -1,0 +1,71 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_1
+    layout_properties: {grid_position: 'JFOXYK,TQTETE'}
+    components:
+    - type: Label
+      properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: 'Upload any windows exe file to be analyzed by the models. We will make sure to add all models here, so if you don''t find them all please be patient with us.'}
+      name: label_2
+      layout_properties: {grid_position: 'OLJYDV,RLKIDH'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}', spacing_above: small, background: 'theme:Primary 500', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
+    name: card_2
+    layout_properties: {grid_position: 'CZJWDB,EIQMXP'}
+    components:
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 50', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Upload File}
+      name: label_3
+      layout_properties: {grid_position: 'NNNFTB,QIEVRF'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{"USBAJT":27,"LKHKJZ":8,"LYSILU":25,"ABRDOR":25,"ZLAUNJ":10,"HLJIBO":25}'}
+    name: card_3
+    layout_properties: {grid_position: 'MVYWSU,HCAMFZ'}
+    components:
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_1
+      layout_properties: {grid_position: 'NBRVBN,USBAJT'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: 'fa:file', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: 70, tooltip: '', text: ''}
+      name: label_4
+      layout_properties: {grid_position: 'NBRVBN,LKHKJZ'}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_2
+      layout_properties: {grid_position: 'NBRVBN,LYSILU'}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_3
+      layout_properties: {grid_position: 'NTDLRO,ABRDOR'}
+    - type: FileLoader
+      properties: {}
+      name: exe_loader
+      layout_properties: {grid_position: 'NTDLRO,ZLAUNJ'}
+      event_bindings: {change: on_upload}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_4
+      layout_properties: {grid_position: 'NTDLRO,HLJIBO'}
+  - type: Button
+    properties: {role: primary-color, bold: false, align: center, spacing_above: small, background: '', icon: 'fa:search', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: analyze}
+    name: primary_color_1
+    layout_properties: {grid_position: 'BKWXSY,NGAZDT'}
+    event_bindings: {click: go_analyze}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: UPLOAD FILE}
+  name: label_1
+  layout_properties: {slot: title}
